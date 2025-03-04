@@ -1,0 +1,29 @@
+/* Poppins - Modern & Stylish */
+.poppins-heading {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+}
+
+/* Montserrat - Clean & Professional */
+.montserrat-heading {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+/* Playfair Display - Elegant & Luxurious */
+.playfair-heading {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+}
+
+/* Orbitron - Futuristic & Techy */
+.orbitron-heading {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 700;
+}
+
+/* Bebas Neue - Bold & Impactful */
+.bebas-heading {
+    font-family: 'Bebas Neue', sans-serif;
+    font-weight: 400; /* Bebas Neue has only one weight */
+}

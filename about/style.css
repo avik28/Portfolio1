@@ -1,4 +1,63 @@
-/* Add a refined background color to the page */
+/* Style for dropdown headings */
+.dropdown {
+  padding-left: 30px;
+  cursor: pointer;
+  background-color: #f8f9fa;
+  color: black;
+  border-radius: 5px;
+  text-align: left;
+  display: inline-flex; /* Ensures arrow stays aligned */
+  align-items: center;
+  gap: 8px; /* Keeps arrow close to text */
+  margin: 10px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Make dropdowns visible on page load */
+.dropdown.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Scaling effect on hover and open */
+.dropdown.open {
+  transform: scale(1.2);
+}
+.dropdown:not(.open):hover {
+  transform: scale(1.2);
+}
+
+/* Style for dropdown arrow */
+.arrow {
+  transition: transform 0.4s ease-in-out;
+  font-size: 16px;
+  display: inline-block;
+}
+
+/* Rotate arrow when dropdown is open */
+.dropdown.open .arrow {
+  transform: rotate(180deg);
+}
+
+/* Initially hide dropdown content */
+.dropdown-content {
+  padding-left: 40px;
+  display: none;
+  background-color: #f9f9f9;
+  border-left: 3px solid #222;
+  margin-left: 80px;
+  margin-top: 5px;
+  transition: max-height 0.3s ease-out;
+  overflow: hidden;
+}
+
+/* When active, show content */
+.dropdown-content.active {
+  display: block;
+}
+
 li{
     font-size:17px;
 }
@@ -8,30 +67,19 @@ ul {
 .intro{
     max-width: 250px;
 }
-h2 {
-    display: inline-block;
-    position: relative;
-    font-size: 26px;
-    font-weight: bold;
-    color: #333;
+.orbitron-heading {
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 700;
 }
-h2 {
-    padding-left: 40px;
-    margin-bottom: 0;
-    font-family: Calibri, sans-serif;
-    font-size: 28px;
-    font-weight: 700;
-}
-
 
 li{
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-weight:100;
 }
 
 pre{
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-weight:400;
+  font-family: 'Poppins', sans-serif;
+  font-weight:400;
 }
   body, html {
     font-family: 'Courier New', Courier, monospace;
@@ -55,6 +103,7 @@ pre{
     align-items: center;
     justify-content:space-between;
     overflow: hidden;
+    margin-bottom:40px;
   }
   
   /* Style the links inside the navigation bar */
