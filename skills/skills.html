@@ -1,18 +1,317 @@
-<html>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Modals</title>
     <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
     <div class="topnav">
-      <script src="script.js"></script>
-    <a href="../index.html" class="logo">Home</a>
-    <div class="others">
-        <a href="../about/about.html">About</a>
-        <a href="../projects/projects.html">Projects</a>
-        <a href="../skills/skills.html">Skills</a>
-        <a href="../Resume">Resume</a>
-        <a href="../achievements/achievements.html">Achievements</a>
-        <a href="../contact/contact.html">Contact</a>
-      </div>
-      </div>
+        <a href="../index.html" class="logo">Home</a>
+        <div class="others">
+            <a href="../about/about.html">About</a>
+            <a href="../projects/projects.html">Projects</a>
+            <a href="../skills/skills.html">Skills</a>
+            <a href="../Resume/resume.html">Resume</a>
+            <a href="../achievements/achievements.html">Achievements</a>
+            <a href="../contact/contact.html">Contact</a>
+        </div>
+    </div>
+
+    <h3 style="margin-left:20px;margin-top:20px;">Technical Skills</h3>
+
+    <!-- Grid Layout -->
+    <div class="grid-container">
+        <button class="grid-item" data-modal="cpp">C++</button>
+        <button class="grid-item" data-modal="java">Java</button>
+        <button class="grid-item" data-modal="python">Python</button>
+        <button class="grid-item" data-modal="c">C</button>
+        <button class="grid-item" data-modal="r">R</button>
+        <button class="grid-item" data-modal="csharp">C#</button>
+        <button class="grid-item" data-modal="dbms">DBMS</button>
+        <button class="grid-item" data-modal="webdev">Web Development</button>
+    </div>
+
+    <!-- Modals -->
+    <div id="cpp" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>C++</h3>
+            <pre align="left">
+Basic Variables
+Loops
+            </pre>
+        </div>
+    </div>
+
+    <div id="java" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>Java</h3>
+            <pre align="left">
+Swing (javax)
+- GUI Components
+- Event Handling
+- Layout Managers
+
+Object-Oriented Programming (OOP) Concepts
+- Classes & Objects
+- Inheritance
+- Polymorphism
+- Encapsulation
+- Abstraction
+
+Data Structures
+- Arrays
+- Linked Lists
+- Stacks & Queues
+- Trees & Graphs
+
+General Algorithms
+- Sorting & Searching Algorithms
+- Recursion
+- Dynamic Programming
+- Greedy Algorithms
+- Divide & Conquer
+- Backtracking
+            </pre>
+        </div>
+    </div>
+
+    <div id="python" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>Python</h3>
+            <pre align="left">
+Data Structures & Algorithms (DSA)
+- Lists, Stacks, Queues, Linked Lists
+- Trees, Graphs
+- Sorting & Searching Algorithms
+- Recursion
+- Dynamic Programming
+
+Machine Learning Basics
+- Training a model
+- Feature extraction
+- Basic data preprocessing
+- Model evaluation
+
+Plotting Basics
+- Matplotlib
+- Seaborn
+
+General Algorithm Knowledge
+- Time & Space Complexity
+- Greedy Algorithms
+- Divide & Conquer
+- Backtracking
+
+Object-Oriented Programming (OOP) Concepts
+- Classes & Objects
+- Inheritance
+- Polymorphism
+- Encapsulation
+- Abstraction
+            </pre>
+        </div>
+    </div>
+
+    <div id="c" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>C</h3>
+            <pre align="left">
+Data Structures
+- Arrays
+- Linked Lists
+- Stacks & Queues
+- Trees & Graphs
+
+General Algorithms
+- Sorting & Searching Algorithms
+- Recursion
+- Dynamic Programming
+- Greedy Algorithms
+- Divide & Conquer
+- Backtracking
+            </pre>
+        </div>
+    </div>
+
+    <div id="r" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>R</h3>
+            <pre align="left">
+Web Scraping
+- rvest
+- httr
+
+Plotting
+- ggplot2
+- Base R plotting
+
+Data Science
+- dplyr (Data Manipulation)
+- tidyr (Data Cleaning)
+- Machine Learning (Basic)
+            </pre>
+        </div>
+    </div>
+
+    <div id="csharp" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>C#</h3>
+            <pre align="left">
+- Basic Variables
+- Loops
+- Conditional Statements
+            </pre>
+        </div>
+    </div>
+
+    <div id="dbms" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>DBMS</h3>
+            <pre align="left">
+- Database Concepts
+- SQL Queries
+- Normalization
+- Transactions & Concurrency Control
+- Indexing & Optimization
+- ER Diagrams
+            </pre>
+        </div>
+    </div>
+
+    <div id="webdev" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>Web Development</h3>
+            <pre align="left">
+- HTML
+- CSS
+- JavaScript
+- Deployment
+            </pre>
+        </div>
+    </div>
+    <h3 style="margin-left:20px;margin-top:20px;">Soft Skills</h3>
+
+    <!-- Grid Layout -->
+    <div class="grid-container">
+        <button class="grid-item" data-modal="problem-solving">Problem-Solving</button>
+        <button class="grid-item" data-modal="critical-thinking">Critical Thinking</button>
+        <button class="grid-item" data-modal="communication">Communication</button>
+        <button class="grid-item" data-modal="team-collaboration">Team Collaboration</button>
+        <button class="grid-item" data-modal="adaptability">Adaptability</button>
+        <button class="grid-item" data-modal="time-management">Time Management</button>
+        <button class="grid-item" data-modal="attention-to-detail">Attention to Detail</button>
+        <button class="grid-item" data-modal="leadership">Leadership</button>
+    </div>
+    
+    <!-- Modals -->
+    <div id="problem-solving" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>Problem-Solving</h3>
+            <pre align="left">
+    - Identifying and analyzing complex issues
+    - Developing and implementing effective solutions
+    - Logical reasoning and creative thinking
+            </pre>
+        </div>
+    </div>
+    
+    <div id="critical-thinking" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>Critical Thinking</h3>
+            <pre align="left">
+    - Evaluating arguments and evidence
+    - Making reasoned decisions
+    - Recognizing biases and logical fallacies
+            </pre>
+        </div>
+    </div>
+    
+    <div id="communication" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>Communication</h3>
+            <pre align="left">
+    - Clear and concise verbal and written communication
+    - Active listening and feedback processing
+    - Adapting messages for different audiences
+            </pre>
+        </div>
+    </div>
+    
+    <div id="team-collaboration" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>Team Collaboration</h3>
+            <pre align="left">
+    - Working effectively within a team
+    - Resolving conflicts and fostering teamwork
+    - Contributing to group goals and decision-making
+            </pre>
+        </div>
+    </div>
+    
+    <div id="adaptability" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>Adaptability</h3>
+            <pre align="left">
+    - Adjusting to new environments and challenges
+    - Learning new skills quickly
+    - Staying flexible in changing circumstances
+            </pre>
+        </div>
+    </div>
+    
+    <div id="time-management" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>Time Management</h3>
+            <pre align="left">
+    - Prioritizing tasks efficiently
+    - Meeting deadlines and managing workload
+    - Avoiding procrastination and staying organized
+            </pre>
+        </div>
+    </div>
+    
+    <div id="attention-to-detail" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>Attention to Detail</h3>
+            <pre align="left">
+    - Ensuring accuracy in work
+    - Spotting errors and inconsistencies
+    - Maintaining high-quality standards
+            </pre>
+        </div>
+    </div>
+    
+    <div id="leadership" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>Leadership</h3>
+            <pre align="left">
+    - Inspiring and motivating others
+    - Delegating tasks effectively
+    - Making informed decisions and guiding teams
+            </pre>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
 </body>
 </html>

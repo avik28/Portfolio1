@@ -2,7 +2,6 @@
 .dropdown {
   padding-left: 30px;
   cursor: pointer;
-  background-color: #f8f9fa;
   color: black;
   border-radius: 5px;
   text-align: left;
@@ -46,7 +45,7 @@
   max-height:0;
   opacity:0;
   padding-left: 40px;
-  background-color:#f8f6f4;
+  background-color:#f6f6f6;
   border-left: 3px solid #222;
   margin-left: 80px;
   margin-right:20px;
@@ -71,7 +70,7 @@ ul {
     max-width: 250px;
 }
 .orbitron-heading {
-  font-family: 'Orbitron', sans-serif;
+  font-family: 'Courier New', Courier, monospace;
   font-weight: 700;
 }
 
@@ -84,47 +83,51 @@ pre{
   font-family: 'Poppins', sans-serif;
   font-weight:400;
 }
-  body, html {
-    font-family: 'Courier New', Courier, monospace;
-    font-weight:501;
-    background-color:#f8f9fa; /* Soft Off-White */
-    margin: 0;
-    padding: 0;
-  }
-  .nav-links {
-    display: flex;
-    gap: 15px; /* Adds space between links */
-  }
-  .logo{
-    margin-left:20px;
-  }
-  .topnav {
-    padding-right:15px;
-    padding-top:15px;
-    display: flex;
-    gap:0.1px;
-    align-items: center;
-    justify-content:space-between;
-    overflow: hidden;
-    margin-bottom:40px;
-  }
-  
-  /* Style the links inside the navigation bar */
-  .topnav a {
-    transition: transform 0.2s ease-in-out;
-    float: left;
-    color: #333; /* Dark gray text for readability */
-    text-align: center;
-    padding:5px 10px;
-    text-decoration: none;
-    font-size: 18.5px;
-    font-weight:1000;
-  }
-  
-  /* Add a color to the active/current link */
-  .topnav a:hover {
-    transform: scale(1.18);
-    color: #5a99d4;
-    text-decoration: underline;
-    text-underline-offset: 5px;
-  }
+/* General Styles */
+body, html {
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 501;
+  background-color: #ffffff; /* Soft Off-White */
+  margin: 0;
+  padding: 0;
+}
+
+/* Navigation Bar */
+.topnav {
+  margin-bottom:10px;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ffffff;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  margin-left: 20px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 15px; /* Adds space between links */
+}
+
+.topnav a {
+  transition: transform 0.2s ease-in-out;
+  color: #333;
+  text-align: center;
+  padding: 5px 10px;
+  text-decoration: none;
+  font-size: 18.5px;
+  font-weight: 1000;
+}
+
+/* Hover effect for navbar links */
+.topnav a:hover {
+  transform: scale(1.1);
+  color: #5a99d4;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}

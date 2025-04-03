@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <div class="topnav">
+        <a href="../index.html" class="logo">Home</a>
+        <div class="others">
+            <a href="../about/about.html">About</a>
+            <a href="../projects/projects.html">Projects</a>
+            <a href="../skills/skills.html">Skills</a>
+            <a href="../Resume/resume.html">Resume</a>
+            <a href="../achievements/achievements.html">Achievements</a>
+            <a href="../contact/contact.html">Contact</a>
+        </div>
+    </div>
+
+    <!-- Social Media Icons -->
+    <h3 style="text-align: center; padding: 0; margin-top: 200px;">CHECK OUT MY PROFILES</h3>
+
+    <div style="display: flex; justify-content: center; align-items: center;">
+        <div style="display: flex; gap: 30px;">
+            <a href="https://www.instagram.com/avi._.k_28/" target="_blank"><i class="fa-brands fa-instagram social-icon" style="color: #E4405F;"></i></a>
+            <a href="https://www.linkedin.com/in/saiavinashk/" target="_blank"><i class="fa-brands fa-linkedin social-icon" style="color: #0A66C2;"></i></a>
+            <a href="https://github.com/avik28" target="_blank"><i class="fa-brands fa-github social-icon" style="color: black;"></i></a>
+
+            <!-- LeetCode Logo -->
+            <a href="https://leetcode.com/u/avik28/" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png" alt="LeetCode" class="social-icon">
+            </a>
+
+            <!-- CodeChef Logo -->
+            <a href="https://www.codechef.com/users/avik2802" target="_blank">
+                <img src="https://media.licdn.com/dms/image/v2/C4E34AQEKBABiNR__eA/ugc-proxy-shrink_1280_800/ugc-proxy-shrink_1280_800/0/1599134270336?e=2147483647&v=beta&t=t9UpCvx8Q2p-7jaUW6uunclf8g-1qsJzvL13hsbyVH4" alt="CodeChef" class="social-icon">
+            </a>
+
+            <!-- InterviewBit Logo -->
+            <a href="https://www.interviewbit.com/profile/sai-avinash-komaragiri/" target="_blank">
+                <img src="interviewbit.jpeg" alt="InterviewBit" class="social-icon">
+            </a>
+
+            <!-- Gmail Logo (Copy to Clipboard) -->
+            <a href="#" onclick="copyGmail(event)">
+                <img src="https://www.gstatic.com/marketing-cms/assets/images/66/ac/14b165e647fd85c824bfbe5d6bc5/gmail.webp=s96-fcrop64=1,00000000ffffffff-rw" alt="Gmail" class="social-icon">
+            </a>
+
+            <!-- Phone (Copy to Clipboard) -->
+            <a href="#" onclick="copyPhoneNumber(event)">
+                <img src="https://play-lh.googleusercontent.com/bk3e0glVbvRC4Z0uEZ5Oso5wjS89r1P_X5e-k3N_UBkTPXZLhGv50rRy7LAuDzzC9w=w480-h960-rw" 
+                     width="50" height="50" 
+                     style="transition: transform 0.3s ease-in-out;" 
+                     onmouseover="this.style.transform='scale(1.2)'" 
+                     onmouseout="this.style.transform='scale(1)'">
+            </a>
+            
+            
+        </div>
+    </div>
+
+    <!-- Notification Box -->
+    <div id="notification" class="notification">Copied!</div>
+
+    <style>
+        .social-icon {
+            font-size: 50px;
+            width: 50px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .social-icon:hover {
+            transform: scale(1.2);
+        }
+
+        .phone-icon {
+            background-color: white;
+            color: black;
+            border: 2px solid black;
+            border-radius: 50%;
+            padding: 10px;
+        }
+
+        .notification {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: black;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+    </style>
+
+    <script>
+        function copyPhoneNumber(event) {
+            event.preventDefault();
+            const phoneNumber = "+91 7674818074"; // Change this to your actual phone number
+            copyToClipboard(phoneNumber);
+        }
+
+        function copyGmail(event) {
+            event.preventDefault();
+            const email = "komaragirisaiavinashbharadhwaj@gmail.com";
+            copyToClipboard(email);
+        }
+
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text).then(() => {
+                const notification = document.getElementById("notification");
+                notification.innerText = "Copied check your clipboard!";
+                notification.style.display = "block";
+                setTimeout(() => {
+                    notification.style.display = "none";
+                }, 2000);
+            });
+        }
+    </script>
+
+</body>
+</html>

@@ -1,17 +1,95 @@
-<html>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <style>
+        /* Wrapper to center everything */
+        .progress-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 75vh; /* Adjusted to move it up */
+        }
+
+        /* Progress bar container */
+        .progress-container {
+            width: 50%;
+            height: 35px; /* Increased height */
+            background: #d1d1d6;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Actual loading bar */
+        .progress-bar {
+            height: 100%;
+            width: 0%;
+            background: black;
+            border-radius: 10px;
+            transition: width 3s ease-in-out;
+        }
+
+        /* Text below the progress bar */
+        .progress-text {
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            color: #2c2c2e;
+            margin-top: 15px;
+            font-family: monospace;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
     <div class="topnav">
-      <script src="script.js"></script>
-    <a href="../index.html" class="logo">Home</a>
-    <div class="others">
-        <a href="../about/about.html">About</a>
-        <a href="../projects/projects.html">Projects</a>
-        <a href="../skills/skills.html">Skills</a>
-        <a href="../resume/resume.html">Resume</a>
-        <a href="../achievements/achievements.html">Achievements</a>
-        <a href="../contact/contact.html">Contact</a>
-      </div>
+        <a href="../index.html" class="logo">Home</a>
+        <div class="others">
+            <a href="../about/about.html">About</a>
+            <a href="../projects/projects.html">Projects</a>
+            <a href="../skills/skills.html">Skills</a>
+            <a href="../resume/resume.html">Resume</a>
+            <a href="../achievements/achievements.html">Achievements</a>
+            <a href="../contact/contact.html">Contact</a>
+        </div>
+    </div>
+
+    <!-- Progress Bar Section -->
+    <div class="progress-wrapper">
+        <div class="progress-container">
+            <div class="progress-bar" id="progress"></div>
+        </div>
+        <div class="progress-text">Projects in Progress</div>
+    </div>
+
+    <script>
+        window.onload = function () {
+            let progressBar = document.getElementById("progress");
+            let increasing = true;
+
+            function updateProgress() {
+                if (increasing) {
+                    progressBar.style.width = "50%";
+                } else {
+                    progressBar.style.width = "0%";
+                }
+                increasing = !increasing;
+            }
+
+            // Start immediately
+            progressBar.style.width = "50%";
+
+            // Continue animation loop
+            setInterval(updateProgress, 3000);
+        };
+    </script>
+
 </body>
 </html>
